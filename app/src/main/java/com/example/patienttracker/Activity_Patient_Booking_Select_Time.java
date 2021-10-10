@@ -10,7 +10,9 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.os.StrictMode;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -18,6 +20,7 @@ import android.widget.CalendarView;
 import android.widget.LinearLayout;
 import android.widget.ScrollView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
@@ -38,12 +41,23 @@ import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.mail.Address;
+import javax.mail.Authenticator;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import java.util.Properties;
+
 public class Activity_Patient_Booking_Select_Time extends AppCompatActivity {
 
     private static final String TAG = "Activity Patient Booking Select";
 
     //variables
-    private String doctor_document_id,patient_document_id;
+    private String doctor_document_id,doctor_document_email,patient_document_id, patient_document_email;
     private Note_Doctor doctor_information;
     public String selectedDate,selectedDayOfWeek;
     private final long dateToday = new Date().getTime();
@@ -102,7 +116,9 @@ public class Activity_Patient_Booking_Select_Time extends AppCompatActivity {
         //get variables from previous activity
         Intent intent = getIntent();
         patient_document_id = intent.getStringExtra(Fragment_Patient_Home.phoneKey);
+        patient_document_email = intent.getStringExtra(Fragment_Patient_Home.emailKey);
         doctor_document_id = intent.getStringExtra(Activity_Patient_Booking_Select_Doctor.doctorInformationKey);
+        doctor_document_email = intent.getStringExtra(Activity_Patient_Booking_Select_Doctor.doctorEmailKey);
 
         //set widgets view
         calendarView = findViewById(R.id.CV_A_PatientBookingSelect_Calender);
@@ -147,6 +163,7 @@ public class Activity_Patient_Booking_Select_Time extends AppCompatActivity {
         selectedDate = today;
 
         getDayOfTheWeekANDgetDoctorAvailabilityToday(calendar.get(Calendar.DAY_OF_WEEK));
+        Log.d(TAG, "Patient Email"+ patient_document_email);
     }
 
     @Override
@@ -163,6 +180,7 @@ public class Activity_Patient_Booking_Select_Time extends AppCompatActivity {
                 int intdayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);
 
                 getDayOfTheWeekANDgetDoctorAvailabilityToday(intdayOfWeek);
+
             }
         });
 
@@ -637,6 +655,45 @@ public class Activity_Patient_Booking_Select_Time extends AppCompatActivity {
         }
     }
 
+
+    private class EmailTask extends AsyncTask<Void,Void,Void>{
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+                    final String Username = "notdiscoveryemails@gmail.com";
+                    final String Password = "SDgroup12";
+                    String MessagetoSend = "Booking confirmed for "+selectedDate;
+                    Properties props = new Properties();
+                    props.put("mail.smtp.auth","true");
+                    props.put("mail.smtp.starttls.enable","true");
+                    props.put("mail.smtp.host","smtp.gmail.com");
+                    props.put("mail.smtp.port","587");
+
+                    Session session = Session.getInstance(props,
+                            new Authenticator(){
+                                @Override
+                                protected PasswordAuthentication getPasswordAuthentication(){
+                                    return new PasswordAuthentication(Username,Password);
+                                }
+                            });
+
+                    try{
+                        Message message = new MimeMessage(session);
+                        message.setFrom(new InternetAddress(Username));
+                        Log.d(TAG, "Patient Email in email task"+ patient_document_email);
+                        String SendList = doctor_document_email +","+patient_document_email;
+                        message.setRecipients(Message.RecipientType.TO,InternetAddress.parse(SendList) );
+                        message.setSubject("Not Discovery Booking Confirmation");
+                        message.setText(MessagetoSend);
+                        Transport.send(message);
+                    }catch(MessagingException e){
+                        throw new RuntimeException(e);
+                    }
+
+            return null;
+        }
+    }
+
     private void bookTimeSlot(String timeSlot){
         Note_Booking note_booking = new Note_Booking(
                 selectedDate,today,timeSlot,doctor_document_id,patient_document_id,noteIsHalfHourSlots);
@@ -647,6 +704,7 @@ public class Activity_Patient_Booking_Select_Time extends AppCompatActivity {
                     public void onSuccess(DocumentReference documentReference) {
                         Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
                         getPatientData();
+                        new EmailTask().execute();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {

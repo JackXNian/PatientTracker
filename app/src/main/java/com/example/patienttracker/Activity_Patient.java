@@ -29,7 +29,7 @@ public class Activity_Patient extends AppCompatActivity {
     //Fragment
     private Fragment_Patient_Home fragment_patient_home;
     private Fragment_Patient_Lookup fragment_patient_lookup;
-    private Fragment_Patient_History fragment_patient_booking;
+    private Fragment_Patient_History fragment_patient_history;
 
     //Widgets
     private MeowBottomNavigation meowBottomNavigation;
@@ -53,7 +53,7 @@ public class Activity_Patient extends AppCompatActivity {
         fragment_patient_home = Fragment_Patient_Home.newInstance(
                 userFName,userLName,userPhone,userEmail);
 //        fragment_patient_lookup = Fragment_Patient_Lookup.newInstance();
-//        fragment_patient_booking = Fragment_Patient_Booking.newInstance();
+        fragment_patient_history = Fragment_Patient_History.newInstance(userPhone);
 
         //Assign variable
         meowBottomNavigation = findViewById(R.id.bottom_navigation);
@@ -83,9 +83,9 @@ public class Activity_Patient extends AppCompatActivity {
                         loadFragment(fragment);
                         break;
                     case 3://When id is 3 Patient History
-//                        loadFragment(fragment_patient_booking);
-                        fragment = new Fragment_Patient_History();
-                        loadFragment(fragment);
+                       loadFragment(fragment_patient_history);
+                       // fragment = new Fragment_Patient_History();
+                        //loadFragment(fragment);
                         break;
                 }
             }

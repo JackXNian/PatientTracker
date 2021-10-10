@@ -40,7 +40,8 @@ public class Activity_Patient_Booking_Select_Doctor extends AppCompatActivity {
     //variables
     public ArrayList<String> doctorNames = new ArrayList<String>();
     public static String doctorInformationKey = "DoctorInformation";
-    private String doctorFields,doctorName, patient_document_id;
+    public static String doctorEmailKey = "DoctorEmail";
+    private String doctorFields,doctorName, patient_document_id,patient_document_email,doctorEmail ;
 
     private Map<String, Object> patientData = new HashMap<>();
 
@@ -71,7 +72,7 @@ public class Activity_Patient_Booking_Select_Doctor extends AppCompatActivity {
         //get variables from previous activity
         Intent intent = getIntent();
         patient_document_id = intent.getStringExtra(Fragment_Patient_Home.phoneKey);
-
+        patient_document_email = intent.getStringExtra(Fragment_Patient_Home.emailKey);
         atv_Fields  = findViewById(R.id.ATV_A_PatientBooking_Fields);
         atv_Doctors = findViewById(R.id.ATV_A_PatientBooking_Doctors);
         il_Doctor_Names = findViewById(R.id.IL_A_PatientBooking_Doctors);
@@ -214,15 +215,17 @@ public class Activity_Patient_Booking_Select_Doctor extends AppCompatActivity {
                 .setOnItemClickListener(new Adapter_Note_Doctor_Info.OnItemClickListener() {
                     @Override
                     public void onItemClick(DocumentSnapshot documentSnapshot, int position) {
-                        selectTime(documentSnapshot.getId());
+                        selectTime(documentSnapshot.getId(),documentSnapshot.toObject(Note_Doctor.class).getEmail());
                     }
                 });
     }
 
-    private void selectTime(String doctor_document_id) {
+    private void selectTime(String doctor_document_id, String doctor_document_email) {
         Intent intent = new Intent(this, Activity_Patient_Booking_Select_Time.class);
         intent.putExtra(doctorInformationKey, doctor_document_id);
+        intent.putExtra(doctorEmailKey, doctor_document_email);
         intent.putExtra(Fragment_Patient_Home.phoneKey, patient_document_id);
+        intent.putExtra(Fragment_Patient_Home.emailKey, patient_document_email);
         startActivity(intent);
         atv_Fields.setText("");
         atv_Doctors.setText("");

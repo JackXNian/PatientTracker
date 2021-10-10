@@ -11,7 +11,8 @@ import com.etebarian.meowbottomnavigation.MeowBottomNavigation;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Activity_Doctor extends AppCompatActivity {
+public class
+Activity_Doctor extends AppCompatActivity {
 
     //Variables
     public static final String TAG = "DoctorActivity";
@@ -27,15 +28,12 @@ public class Activity_Doctor extends AppCompatActivity {
     private String userFields = "";
     private String userQualifications = "";
     private String userYears = "";
-    private String test;
-    private String test2;
-    private String test3;
 
     //Fragment
     private Fragment_Doctor_Home fragment_doctor_home;
     private Fragment_Doctor_Appointments fragment_doctor_appointments;
     private Fragment_Doctor_Availability fragment_doctor_availability;
-
+    private Fragment_Doctor_History fragment_doctor_history;
     //Widgets
     private MeowBottomNavigation meowBottomNavigation;
 
@@ -63,6 +61,7 @@ public class Activity_Doctor extends AppCompatActivity {
 //        fragment_doctor_search = Fragment_Doctor_Search.newInstance();
         fragment_doctor_availability = Fragment_Doctor_Availability.newInstance(userPhone);
 
+        fragment_doctor_history = Fragment_Doctor_History.newInstance(userPhone);
         //Assign variable
         meowBottomNavigation = findViewById(R.id.bottom_navigation);
 
@@ -70,6 +69,7 @@ public class Activity_Doctor extends AppCompatActivity {
         meowBottomNavigation.add(new MeowBottomNavigation.Model(1,R.drawable.ic_person));
         meowBottomNavigation.add(new MeowBottomNavigation.Model(2,R.drawable.ic_search));
         meowBottomNavigation.add(new MeowBottomNavigation.Model(3,R.drawable.ic_availability));
+        meowBottomNavigation.add(new MeowBottomNavigation.Model(4,R.drawable.ic_booking));
 
         //Accessing Menu items
         meowBottomNavigation.setOnShowListener(new MeowBottomNavigation.ShowListener() {
@@ -91,6 +91,8 @@ public class Activity_Doctor extends AppCompatActivity {
                     case 3://When id is 3 Doctor Availability
                         loadFragment(fragment_doctor_availability);
                         break;
+                    case 4: //when id is 4 Doctor History
+                    loadFragment(fragment_doctor_history);
 
                 }
             }
