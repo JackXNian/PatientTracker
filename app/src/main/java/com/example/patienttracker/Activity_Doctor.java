@@ -28,6 +28,7 @@ public class Activity_Doctor extends AppCompatActivity {
     private String userQualifications = "";
     private String userYears = "";
     private String test;
+    private String test2;
 
     //Fragment
     private Fragment_Doctor_Home fragment_doctor_home;
