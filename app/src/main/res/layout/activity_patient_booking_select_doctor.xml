@@ -91,16 +91,15 @@
     </ScrollView>
 
     <Button
+        android:id="@+id/B_A_PatientBooking_Back"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
 
-        android:id="@+id/B_A_PatientBooking_Back"
+        android:layout_alignParentBottom="true"
 
         android:layout_marginHorizontal="50dp"
 
-        android:text="Back"
-        />
+        android:text="Back" />
 
 
 </RelativeLayout>

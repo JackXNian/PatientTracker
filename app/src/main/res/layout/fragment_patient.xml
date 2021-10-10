@@ -206,7 +206,7 @@
 
         android:text="Book Appointment"
         android:textColor="@color/pureWhite"
-        android:textSize="20sp"/>
+        android:textSize="20sp" />
 
 
 </RelativeLayout>

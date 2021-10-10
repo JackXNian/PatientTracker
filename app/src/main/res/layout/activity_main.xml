@@ -23,8 +23,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="80dp"
 
-        android:src="@drawable/app_logo_main">
-    </ImageView>
+        android:src="@drawable/app_logo_main"></ImageView>
 
     <TextView
         android:id="@+id/TV_A_Main_LoginHeading"

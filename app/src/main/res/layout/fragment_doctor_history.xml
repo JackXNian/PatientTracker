@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:barrierMargin="10dp"
-    tools:context=".Fragment_Patient_History"
+    tools:context=".Fragment_Doctor_History"
+    android:background="@color/greenDoctor2"
     tools:ignore="HardcodedText">
 
     <androidx.recyclerview.widget.RecyclerView
