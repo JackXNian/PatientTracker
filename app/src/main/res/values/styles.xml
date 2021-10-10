@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/greenDoctor</item>
+        <item name="colorPrimaryDark">@color/pureWhite</item>
+        <item name="colorAccent">@color/bluePatient</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar0">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Status bar -->
+        <item name="colorPrimaryDark">@color/greenDoctor2</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar1">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Status bar -->
+        <item name="colorPrimaryDark">@color/greenDoctor</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar2">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Status bar -->
+        <item name="colorPrimaryDark">@color/bluePatient2</item>
+    </style>
+
+    <style name="AppTheme.NoActionBarUser">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Status bar -->
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="colorPrimaryDark">@color/pureWhite</item>
+    </style>
+
+    <style name="AppTheme.NoActionBarDoctor">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <!-- Status bar -->
+        <item name="colorPrimaryDark">@color/greenDoctor2</item>
+        <item name="colorAccent">@color/greenDoctor</item>
+    </style>
+
+    <!---->
+    <style name="LoginTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/pureWhite</item>
+        <item name="boxStrokeWidth">3dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="android:layout_marginHorizontal">50dp</item>
+        <item name="android:textColorHint">@color/pureWhite</item>
+        <item name="hintTextColor">@color/pureWhite</item>
+        <item name="helperTextEnabled">true</item>
+        <item name="errorEnabled">true</item>
+    </style>
+
+    <!---->
+    <style name="RegisterTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/pureWhite</item>
+        <item name="boxStrokeWidth">3dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="android:layout_marginHorizontal">50dp</item>
+        <item name="android:textColorHint">@color/pureWhite</item>
+        <item name="hintTextColor">@color/pureWhite</item>
+        <item name="helperTextEnabled">true</item>
+        <item name="errorEnabled">true</item>
+        <item name="counterEnabled">true</item>
+        <item name="counterTextColor">@color/pureWhite</item>
+        <item name="helperTextTextColor">@color/pureWhite</item>
+        <item name="errorTextColor">@color/pureRed</item>
+    </style>
+
+<!--    -->
+    <style name="DropDownInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxStrokeColor">@color/pureWhite</item>
+        <item name="boxStrokeWidth">3dp</item>
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="android:layout_marginHorizontal">50dp</item>
+        <item name="android:textColorHint">@color/pureWhite</item>
+        <item name="hintTextColor">@color/pureWhite</item>
+        <item name="endIconTint">@color/pureWhite</item>
+        <item name="errorEnabled">true</item>
+        <item name="counterTextColor">@color/pureWhite</item>
+        <item name="helperTextTextColor">@color/pureWhite</item>
+        <item name="errorTextColor">@color/pureRed</item>
+    </style>
+
+
+
+</resources>

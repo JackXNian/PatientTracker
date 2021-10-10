@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_Patient_Home"
+
+    tools:ignore="HardcodedText"
+    android:background="@color/bluePatient2">
+
+    <RelativeLayout
+        android:id="@+id/RL_F_Patient_Name"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <ImageView
+            android:id="@+id/IV_F_Patient_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_account_box"
+            android:contentDescription="user icon"/>
+        <TextView
+            android:id="@+id/TV_F_Patient_First_Name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/IV_F_Patient_profile"
+
+            android:gravity="bottom"
+            android:text="First Name"
+            android:textColor="@color/pureWhite"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/TV_F_Patient_Last_Name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@+id/IV_F_Patient_profile"
+            android:layout_below="@+id/TV_F_Patient_First_Name"
+
+            android:text="Last Name"
+            android:textColor="@color/pureWhite"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/TV_F_Patient_userID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/IV_F_Patient_profile"
+            android:layout_below="@+id/TV_F_Patient_Last_Name"
+
+            android:text="UserID"
+            android:textColor="@color/pureWhite"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_F_Patient_PhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/RL_F_Patient_Name"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/TV_F_Patient_Phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+
+            android:drawablePadding="10dp"
+
+            android:textColor="@color/pureWhite"
+            android:text="Phone Number"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_phone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_F_Patient_Email"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/RL_F_Patient_PhoneNumber"
+        android:background="@drawable/custom_underline_background">
+
+        <TextView
+            android:id="@+id/TV_F_Patient_Email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+
+            android:drawablePadding="10dp"
+
+            android:gravity="center_vertical"
+            android:text="Email"
+            android:textColor="@color/pureWhite"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_email" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_F_patient_upComing"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/RL_F_Patient_Email"
+
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="20dp"
+
+        android:background="@drawable/fragment_patient_background_bar"
+        android:visibility="gone"
+>
+
+        <TextView
+            android:id="@+id/TV_F_patient_upComing_dateTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="10dp"
+
+            android:text="Date Time"
+            android:textColor="@color/pureWhite"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/TV_F_patient_upComing_doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/TV_F_patient_upComing_dateTime"
+            android:layout_marginStart="10dp"
+
+            android:text="Doctor :"
+            android:textColor="@color/pureWhite"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/TV_F_patient_upComing_doctor_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/TV_F_patient_upComing_doctor"
+            android:layout_marginStart="10dp"
+
+            android:text="Phone Number:"
+            android:textColor="@color/pureWhite"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/TV_F_patient_upComing_dateOfAction"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/TV_F_patient_upComing_doctor_phone"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="5dp"
+
+            android:text="Booked on :"
+            android:textColor="@color/pureWhite"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/LL_patient_upComingNo"
+
+        android:layout_below="@id/RL_F_patient_upComing"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+
+            android:src="@drawable/ic_smile"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:text="No next appointment found."
+            android:textSize="20sp"
+            android:textColor="@color/pureWhite"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/B_F_Patient_Book"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="50dp"
+        android:layout_marginBottom="20dp"
+
+        android:backgroundTint="@color/bluePatient"
+
+        android:text="Book Appointment"
+        android:textColor="@color/pureWhite"
+        android:textSize="20sp"/>
+
+
+</RelativeLayout>

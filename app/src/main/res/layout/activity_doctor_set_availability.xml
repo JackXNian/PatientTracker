@@ -1,0 +1,1311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Doctor_SetAvailability"
+    tools:ignore="HardcodedText"
+    android:background="@color/greenDoctor2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/TV_A_DoctorSetA_Title"
+        android:text="Update Availability"
+
+        android:layout_marginTop="10dp"
+
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/pureBlack"
+
+        android:fontFamily="@font/consolab"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@+id/TV_A_DoctorSetA_Title"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <!--Work Days-->
+            <TextView
+                android:id="@+id/TV_A_DoctorSetA_WorkDays"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/consolab"
+
+                android:text=" Work Days"
+                android:textColor="@color/pureBlack"
+                android:textSize="25sp" />
+            <!--Work Days Switches-->
+            <LinearLayout
+                android:id="@+id/LL_A_DoctorSetA_WorkDaysSwitch"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TV_A_DoctorSetA_WorkDays"
+                android:layout_marginHorizontal="20dp"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_underline_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:text="Sunday"
+                        android:textSize="20sp"
+                        tools:ignore="NestedWeights" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/S_A_DoctorSetA_Sunday"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_underline_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:text="Monday"
+                        android:textSize="20sp"
+                        tools:ignore="NestedWeights" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/S_A_DoctorSetA_Monday"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_underline_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:text="Tuesday"
+                        android:textSize="20sp"
+                        tools:ignore="NestedWeights" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/S_A_DoctorSetA_Tuesday"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_underline_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:text="Wednesday"
+                        android:textSize="20sp"
+                        tools:ignore="NestedWeights" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/S_A_DoctorSetA_Wednesday"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_underline_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:text="Thursday"
+                        android:textSize="20sp"
+                        tools:ignore="NestedWeights" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/S_A_DoctorSetA_Thursday"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/custom_underline_background"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:text="Friday"
+                        android:textSize="20sp"
+                        tools:ignore="NestedWeights"/>
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/S_A_DoctorSetA_Friday"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:text="Saturday"
+                        android:textSize="20sp"
+                        tools:ignore="NestedWeights" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/S_A_DoctorSetA_Saturday"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--Work Time-->
+            <TextView
+                android:id="@+id/TV_A_DoctorSetA_WorkTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@+id/LL_A_DoctorSetA_WorkDaysSwitch"
+                android:fontFamily="@font/consolab"
+
+                android:text=" Work Time"
+                android:textColor="@color/pureBlack"
+                android:textSize="25sp" />
+
+            <!--Work Time Slots-->
+            <LinearLayout
+                android:id="@+id/LL_A_DoctorSetA_WorkTime"
+                android:layout_width="match_parent"
+
+                android:layout_height="wrap_content"
+                android:layout_below="@id/TV_A_DoctorSetA_WorkTime"
+
+                android:layout_marginHorizontal="20dp"
+
+                android:orientation="vertical">
+                <!--switch-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/custom_underline_background"
+
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/TV_A_DoctorSetA_WorkTimeSlots"
+                        android:layout_width="0dp"
+
+                        android:layout_height="wrap_content"
+
+                        android:layout_weight="1"
+                        android:text="Time Slots Interval : 60 minutes"
+                        android:textSize="20sp"
+                        tools:ignore="NestedWeights" />
+
+                    <com.google.android.material.switchmaterial.SwitchMaterial
+                        android:id="@+id/S_A_DoctorSetA_TimeSlot"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content" />
+
+                </LinearLayout>
+                <!--hour buttons-->
+                <LinearLayout
+                    android:id="@+id/LL_A_DoctorSetA_TimeButtons_Hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/custom_background_white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time01"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="00:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time02"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="01:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time03"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="02:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time04"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="03:00"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time05"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="04:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time06"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="05:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time07"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="06:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time08"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="07:00"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time09"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="08:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time10"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="09:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time11"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="10:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time12"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="11:00"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time13"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="12:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time14"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="13:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time15"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="14:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time16"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="15:00"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time17"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="16:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time18"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="17:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time19"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="18:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time20"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="19:00"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time21"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="20:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time22"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="21:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time23"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="22:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_time24"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="23:00"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--half hour buttons-->
+                <LinearLayout
+                    android:id="@+id/LL_A_DoctorSetA_TimeButtons_Half_Hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/custom_background_white"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH01"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="00:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH02"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="00:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH03"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="01:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH04"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="01:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH05"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="02:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH06"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="02:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH07"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="03:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH08"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="03:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH09"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="04:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH10"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="04:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH11"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="05:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH12"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="05:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH13"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="06:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH14"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="06:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH15"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="07:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH16"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="07:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH17"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="08:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH18"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="08:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH19"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="09:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH20"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="09:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH21"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="10:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH22"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="10:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH23"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="11:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH24"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="11:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH25"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="12:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH26"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="12:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH27"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="13:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH28"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="13:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH29"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="14:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH30"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="14:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH31"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="15:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH32"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="15:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH33"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="16:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH34"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="16:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH35"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="17:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH36"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="17:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH37"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="18:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH38"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="18:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH39"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="18:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH40"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="19:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH41"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="20:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH42"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="20:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH43"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="21:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH44"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="21:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH45"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="22:00"
+                            android:textColor="@color/pureWhite"
+                            tools:ignore="NestedWeights" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH46"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="22:30"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH47"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="23:00"
+                            android:textColor="@color/pureWhite" />
+
+                        <Button
+                            android:id="@+id/B_A_DoctorSetA_timeH48"
+                            android:layout_width="wrap_content"
+
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="5dp"
+                            android:layout_weight="1"
+
+                            android:backgroundTint="@color/pureRed"
+                            android:text="23:30"
+                            android:textColor="@color/pureWhite" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+            <!--Confirm Button-->
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/B_A_DoctorSetA_Confirm"
+
+                android:layout_marginVertical="10dp"
+                android:layout_marginHorizontal="50dp"
+                android:layout_below="@+id/LL_A_DoctorSetA_WorkTime"
+
+                android:backgroundTint="@color/bluePatient"
+
+                android:text="Confirm"
+                android:textColor="@color/pureWhite"
+                />
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

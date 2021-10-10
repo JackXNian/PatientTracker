@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- app color -->
+    <color name="greenDoctor">#12e0a2</color>
+    <color name="greenDoctor2">#0cabab</color>
+    <color name="bluePatient">#39c8f7</color>
+    <color name="bluePatient2">#496ceb</color>
+
+    <!-- pure color -->
+    <color name="pureWhite">             #FFFFFF  </color>
+    <color name="pureBlack">             #000000  </color>
+    <color name="pureGery">              #404043  </color>
+    <color name="pureRed">               #FF3B3B  </color>
+    <color name="pureBlue">              #002AFF  </color>
+    <color name="pureGreen">             #00FF0A  </color>
+    <color name="purePurple">            #8C00E3  </color>
+    <color name="lightLime">             #04E8A7  </color>
+    <color name="lightYellow">           #DCCE56  </color>
+    <color name="lightBlue">             #62FFEC  </color>
+
+    <!-- transparent color-->
+    <color name="transparent">           #00FFFFFF</color>
+    <color name="transparentWhite">      #80FFFFFF</color>
+    <color name="transparentBlack">      #80000000</color>
+    <color name="transparentLightLime">  #8004E8A7</color>
+    <color name="transparentLightYellow">#80DCCE56</color>
+
+    <!--override the box color-->
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">#FFFFFF</color>
+</resources>

@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragment_Doctor_Home"
+
+    android:background="@color/greenDoctor2"
+
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:id="@+id/RL_F_DoctorH_Name"
+        android:layout_width="match_parent"
+        android:layout_height="120dp">
+        <ImageView
+            android:id="@+id/IV_F_DoctorH_profile"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/ic_account_box"
+            android:contentDescription="user icon"/>
+
+        <TextView
+            android:id="@+id/TV_F_DoctorH_First_Name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="20dp"
+            android:layout_toEndOf="@+id/IV_F_DoctorH_profile"
+
+            android:gravity="bottom"
+            android:text="First Name"
+            android:textColor="@color/pureWhite"
+            android:textSize="30sp" />
+        <TextView
+            android:id="@+id/TV_F_DoctorH_Last_Name"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_toEndOf="@+id/IV_F_DoctorH_profile"
+            android:layout_below="@+id/TV_F_DoctorH_First_Name"
+
+            android:text="Last Name"
+            android:textColor="@color/pureWhite"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/TV_F_DoctorH_userID"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_F_DoctorH_Last_Name"
+            android:layout_toEndOf="@+id/IV_F_DoctorH_profile"
+
+            android:text="UserID"
+            android:textColor="@color/pureWhite"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_F_DoctorH_PhoneNumber"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/RL_F_DoctorH_Name"
+        android:layout_marginTop="10dp">
+        <TextView
+            android:id="@+id/TV_F_DoctorH_Phone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+
+            android:drawablePadding="10dp"
+
+            android:textColor="@color/pureWhite"
+            android:text="Phone Number"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_phone" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_F_DoctorH_Email"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/RL_F_DoctorH_PhoneNumber">
+        <TextView
+            android:id="@+id/TV_F_DoctorH_Email"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+
+            android:drawablePadding="10dp"
+
+            android:textColor="@color/pureWhite"
+            android:text="Email"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_email" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_F_DoctorH_Fields"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/RL_F_DoctorH_Email">
+        <TextView
+            android:id="@+id/TV_F_DoctorH_Fields"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+
+            android:drawablePadding="10dp"
+
+            android:textColor="@color/pureWhite"
+            android:text="Fields"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_medical" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_F_DoctorH_Qualifications"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/RL_F_DoctorH_Fields">
+        <TextView
+            android:id="@+id/TV_F_DoctorH_Qualifications"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+
+            android:drawablePadding="10dp"
+
+            android:textColor="@color/pureWhite"
+            android:text="Qualifications"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_book" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/RL_F_DoctorH_Years"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/RL_F_DoctorH_Qualifications">
+        <TextView
+            android:id="@+id/TV_F_DoctorH_Years"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="10dp"
+
+            android:drawablePadding="10dp"
+
+            android:textColor="@color/pureWhite"
+            android:text="Years of Experience"
+            android:gravity="center_vertical"
+            android:textSize="20sp"
+            app:drawableStartCompat="@drawable/ic_time" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

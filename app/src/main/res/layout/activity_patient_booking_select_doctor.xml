@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Patient_Booking_Select_Doctor"
+    tools:ignore="HardcodedText"
+    android:background="@color/bluePatient2">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/TV_A_PatientBooking_Title"
+        android:text="Book Appointment"
+
+        android:layout_marginTop="10dp"
+
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/pureWhite"
+
+        android:fontFamily="@font/consolab"
+        />
+
+    <!--Fields-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/IL_A_PatientBooking_Fields"
+        style="@style/DropDownInputLayoutStyle"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/TV_A_PatientBooking_Title"
+        android:layout_marginTop="10dp"
+
+        android:hint="Fields"
+
+        app:helperText="Eg: Please select from the options">
+
+        <AutoCompleteTextView
+            android:id="@+id/ATV_A_PatientBooking_Fields"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:drawableStart="@drawable/ic_medical"
+            android:drawablePadding="10dp"
+
+            android:inputType="none"
+
+            android:textColor="@color/pureWhite"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!--Doctors-->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/IL_A_PatientBooking_Doctors"
+        style="@style/DropDownInputLayoutStyle"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/IL_A_PatientBooking_Fields"
+
+        android:hint="Doctor"
+        android:visibility="gone">
+
+        <AutoCompleteTextView
+            android:id="@+id/ATV_A_PatientBooking_Doctors"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:drawablePadding="10dp"
+
+            android:textColor="@color/pureWhite"
+            android:textSize="18sp" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_above="@+id/B_A_PatientBooking_Back"
+        android:layout_below="@+id/IL_A_PatientBooking_Doctors"
+        android:layout_marginVertical="10dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/RV_A_PatientBooking_Doctors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:id="@+id/B_A_PatientBooking_Back"
+
+        android:layout_marginHorizontal="50dp"
+
+        android:text="Back"
+        />
+
+
+</RelativeLayout>

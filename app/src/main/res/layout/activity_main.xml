@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:launchMode="singleTask"
+
+    android:id="@+id/LO_A_Main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityMain"
+
+    android:background="@drawable/custom_trans"
+    tools:ignore="HardcodedText"
+    >
+
+    <ImageView
+        android:id="@+id/IV_A_Main_AppLogo"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+
+        android:src="@drawable/app_logo_main">
+    </ImageView>
+
+    <TextView
+        android:id="@+id/TV_A_Main_LoginHeading"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/IV_A_Main_AppLogo"
+
+        android:textColor="@color/pureWhite"
+        android:text="Not Discovery"
+        android:textAlignment="center"
+        android:textSize="35sp"
+        android:fontFamily="@font/keania_one_regular"
+        >
+    </TextView>
+
+    <Button
+        android:id="@+id/B_A_Main_Doctor"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/B_A_Main_Patient"
+        android:layout_marginHorizontal="60dp"
+
+        android:layout_marginBottom="20dp"
+        android:backgroundTint="@color/bluePatient"
+
+        android:fontFamily="@font/keania_one_regular"
+
+        android:text="Doctor"
+        android:textColor="@color/pureWhite"
+        android:textSize="25sp"
+        app:icon="@drawable/ic_medical">
+
+    </Button>
+
+    <Button
+        android:id="@+id/B_A_Main_Patient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+
+        app:icon="@drawable/ic_person"
+        style="@style/Widget.MaterialComponents.Button.Icon"
+
+        android:backgroundTint="@color/bluePatient"
+
+        android:fontFamily="@font/keania_one_regular"
+        android:text="Patient"
+        android:textColor="@color/pureWhite"
+        android:textSize="25sp">
+    </Button>
+
+</RelativeLayout>

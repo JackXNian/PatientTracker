@@ -1,0 +1,1159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity_Patient_Booking_Select_Time"
+    android:background="@color/bluePatient2"
+    tools:ignore="HardcodedText">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/TV_A_PatientBookingSelect_Title"
+        android:text="Doctor Availability"
+
+        android:layout_marginTop="10dp"
+
+        android:textAlignment="center"
+        android:textSize="30sp"
+        android:textColor="@color/pureWhite"
+
+        android:fontFamily="@font/consolab"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/LL_A_PatientBookingSelect_Null"
+
+        android:layout_below="@id/TV_A_PatientBookingSelect_Title"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <ImageView
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+
+            android:src="@drawable/ic_sad"
+            android:layout_gravity="center"
+            />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+
+            android:text="Seems like this doctor hasn't set his/her availability."
+            android:textSize="20sp"
+            android:textColor="@color/pureWhite"
+            android:textAlignment="center"
+            />
+
+    </LinearLayout>
+
+    <CalendarView
+        android:id="@+id/CV_A_PatientBookingSelect_Calender"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+
+        android:layout_marginTop="10dp"
+        android:layout_below="@id/LL_A_PatientBookingSelect_Null"
+
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/fragment_calender_backgraound" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/CV_A_PatientBookingSelect_Calender"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+
+        android:id="@+id/TV_A_PatientBookingSelect_Unavailable"
+
+        app:drawableStartCompat="@drawable/ic_sad"
+
+        android:textColor="@color/pureWhite"
+        android:text=" Doctor is unavailable on this day."
+        android:textSize="20sp"
+
+        android:visibility="gone"
+        />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:id="@+id/SV_A_PatientBookingSelect_TimeSlots"
+
+        android:layout_above="@id/B_A_PatientBookingSelect_Back"
+        android:layout_below="@+id/CV_A_PatientBookingSelect_Calender">
+
+        <LinearLayout
+            android:id="@+id/LL_A_PatientBookingSelect_WorkTime"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginHorizontal="20dp"
+
+            android:orientation="vertical">
+
+            <!--hour buttons-->
+            <LinearLayout
+                android:id="@+id/LL_A_PatientBookingSelect_TimeButtons_Hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_marginTop="20dp"
+
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_background_white"
+
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_Time00_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time01"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+                        
+                        android:text="00:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time02"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="01:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time03"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="02:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time04"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="03:00"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_Time04_07"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time05"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="04:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time06"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="05:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time07"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="06:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time08"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="07:00"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_Time08_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time09"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="08:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time10"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="09:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time11"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="10:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time12"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="11:00"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_Time12_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time13"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="12:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time14"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="13:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time15"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="14:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time16"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="15:00"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_Time16_19"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time17"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="16:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time18"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="17:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time19"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="18:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time20"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="19:00"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_Time20_23"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time21"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="20:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time22"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="21:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time23"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="22:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_time24"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="23:00"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--half hour buttons-->
+            <LinearLayout
+                android:id="@+id/LL_A_PatientBookingSelect_TimeButtons_Half_Hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:background="@drawable/custom_background_white"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH00_03"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH01"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="00:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH02"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="00:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH03"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="01:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH04"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="01:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH04_07"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH05"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="02:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH06"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="02:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH07"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="03:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH08"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="03:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH08_11"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH09"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="04:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH10"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="04:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH11"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="05:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH12"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="05:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH12_15"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH13"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="06:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH14"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="06:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH15"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="07:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH16"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="07:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH16_19"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH17"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="08:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH18"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="08:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH19"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="09:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH20"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="09:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH20_23"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH21"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="10:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH22"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="10:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH23"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="11:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH24"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="11:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH24_27"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH25"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="12:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH26"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="12:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH27"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="13:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH28"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="13:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH28_31"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH29"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="14:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH30"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="14:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH31"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="15:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH32"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="15:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH32_35"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH33"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="16:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH34"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="16:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH35"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="17:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH36"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="17:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH36_39"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH37"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="18:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH38"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="18:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH39"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="18:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH40"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="19:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH40_43"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH41"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="20:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH42"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="20:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH43"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="21:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH44"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="21:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/LL_A_PatientBookingSelect_TimeH44_47"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1">
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH45"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="22:00"
+                        android:textColor="@color/pureWhite"
+                        tools:ignore="NestedWeights" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH46"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="22:30"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH47"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="23:00"
+                        android:textColor="@color/pureWhite" />
+
+                    <Button
+                        android:id="@+id/B_A_PatientBookingSelect_timeH48"
+                        android:layout_width="wrap_content"
+
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_weight="1"
+
+                        
+                        android:text="23:30"
+                        android:textColor="@color/pureWhite" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+
+        android:id="@+id/B_A_PatientBookingSelect_Back"
+
+        android:layout_marginHorizontal="50dp"
+
+        android:text="Back"
+        />
+
+
+
+</RelativeLayout>

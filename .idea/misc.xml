@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable-v24/custom_button1.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable-v24/custom_button2.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable-v24/custom_trans2.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable-v24/ic_profile2.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable-v24/scroll_bar_color_trans.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/custom_background_blue.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/custom_background_white.xml" value="0.22702702702702704" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/custom_button_border_red.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/custom_button_trans.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/custom_underline_background.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/fragment_calender_backgraound.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/fragment_doctor_background_bar.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/fragment_doctor_background_bar2.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/fragment_home_background_bar2.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/fragment_home_bar1.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/fragment_home_bar2.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/fragment_patient_background_bar.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/fragment_patient_background_bar2.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/ic_chat_bubble.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/ic_date.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/ic_launcher_background.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable/ic_person2.xml" value="0.33513513513513515" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_doctor_login.xml" value="0.33" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_doctor_main.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_doctor_register.xml" value="0.22735507246376813" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_doctor_set_availability.xml" value="0.30855855855855857" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_main.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_patient_booking.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_patient_booking_select.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_patient_booking_select_doctor.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_patient_booking_select_time.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_patient_login.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_patient_main.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/activity_patient_register.xml" value="0.33" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/card_time_slot.xml" value="0.21306306306306305" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/dialog_booking_successful.xml" value="0.3168888888888889" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/dialog_register_successful.xml" value="0.37135416666666665" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/dialog_update_successful.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/fragment_booking.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/fragment_chat.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/fragment_doctor.xml" value="0.22735507246376813" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/fragment_doctor_availability.xml" value="0.32622222222222225" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/fragment_doctor_chat.xml" value="0.18018018018018017" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/fragment_doctor_search.xml" value="0.25" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/fragment_lookup.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/fragment_patient.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/fragment_search.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/layout/recyclerview_doctor_info.xml" value="0.32117117117117117" />
+        <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.33513513513513515" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

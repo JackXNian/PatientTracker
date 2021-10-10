@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginTop="10dp"
+
+    app:cardCornerRadius="10dp"
+
+    tools:ignore="HardcodedText"
+    app:cardBackgroundColor="@color/bluePatient">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        >
+
+        <TextView
+            android:id="@+id/TV_C_DoctorInfo_Name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:text="Doctor Name"
+            android:textColor="@color/pureWhite"
+            android:textSize="25sp"></TextView>
+
+        <TextView
+            android:id="@+id/TV_C_DoctorInfo_Number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/TV_C_DoctorInfo_Name"
+
+            android:text="Doctor Number"
+            android:textSize="20sp"
+            android:textColor="@color/pureWhite"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/TV_C_DoctorInfo_Qualification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/TV_C_DoctorInfo_Number"
+
+            android:text="Qualification"
+            android:textSize="20sp"
+            android:textColor="@color/pureWhite"
+            >
+        </TextView>
+
+        <TextView
+            android:id="@+id/TV_C_DoctorInfo_Years"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_below="@id/TV_C_DoctorInfo_Qualification"
+
+            android:text="Years"
+            android:textSize="20sp"
+            android:textColor="@color/pureWhite"
+            >
+        </TextView>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
