@@ -12,8 +12,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class AppointmentBlockAdapter extends RecyclerView.Adapter<AppointmentBlockAdapter.AppointmentViewHolder> {
-    private  ArrayList<AppointmentBlock> mAppList;
+public class Adapter_Note_Appointment extends RecyclerView.Adapter<Adapter_Note_Appointment.AppointmentViewHolder> {
+    private  ArrayList<Note_Appointment> mAppList;
 
     public static class AppointmentViewHolder extends RecyclerView.ViewHolder{
         public TextView tv_Appointment_Date;
@@ -29,7 +29,7 @@ public class AppointmentBlockAdapter extends RecyclerView.Adapter<AppointmentBlo
         }
     }
 
-    public AppointmentBlockAdapter(ArrayList<AppointmentBlock> AppHistList){
+    public Adapter_Note_Appointment(ArrayList<Note_Appointment> AppHistList){
         mAppList = AppHistList;
     }
 
@@ -43,7 +43,7 @@ public class AppointmentBlockAdapter extends RecyclerView.Adapter<AppointmentBlo
 
     @Override
     public void onBindViewHolder(@NonNull AppointmentViewHolder holder, int position) {
-        AppointmentBlock current = mAppList.get(position);
+        Note_Appointment current = mAppList.get(position);
         holder.tv_Appointment_Date.setText(current.getAppointmentDateTime());
         holder.tv_Name.setText(current.getName());
         holder.tv_Number.setText(current.getNumber());

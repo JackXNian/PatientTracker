@@ -15,7 +15,6 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
@@ -91,7 +90,7 @@ public class Fragment_Patient_History extends Fragment {
     }
 
     private void loadAppointments(){
-        ArrayList<AppointmentBlock> appHistList = new ArrayList<>();
+        ArrayList<Note_Appointment> appHistList = new ArrayList<>();
         collectionBookingReference
                 .whereEqualTo("patient_documentID", patient_phone)
                 .orderBy("date", Query.Direction.ASCENDING)
@@ -125,8 +124,8 @@ public class Fragment_Patient_History extends Fragment {
                                                     String temp_name1 = (String) documentSnapshot.get("FirstName");
                                                     String temp_name2 = (String) documentSnapshot.get("LastName");
                                                     String name_doctor = temp_name1+ " " +temp_name2;
-                                                    appHistList.add(new AppointmentBlock(date + " " + time, documentID, name_doctor, DoctorID));
-                                                    mAdapter = new AppointmentBlockAdapter(appHistList);
+                                                    appHistList.add(new Note_Appointment(date + " " + time, documentID, name_doctor, DoctorID));
+                                                    mAdapter = new Adapter_Note_Appointment(appHistList);
                                                     mRecyclerView.setLayoutManager(mlayoutManager);
                                                     mRecyclerView.setAdapter(mAdapter);
                                                 }

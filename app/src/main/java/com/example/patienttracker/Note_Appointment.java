@@ -1,16 +1,16 @@
 package com.example.patienttracker;
 
-public class AppointmentBlock {
+public class Note_Appointment {
     private String AppointmentDateTime;
     private String DocumentID;
     private String Name;
     private String Number;
 
-    public AppointmentBlock(){
+    public Note_Appointment(){
         //empty needed for FireStore
     }
 
-    public AppointmentBlock(String appointmentDate, String documentID, String name, String number){
+    public Note_Appointment(String appointmentDate, String documentID, String name, String number){
         AppointmentDateTime = appointmentDate;
         DocumentID = documentID;
         Name = name;

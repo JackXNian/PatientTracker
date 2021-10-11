@@ -13,7 +13,6 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
@@ -98,7 +97,7 @@ public class Fragment_Doctor_History extends Fragment {
 
 
     private void loadAppointments(){
-        ArrayList<AppointmentBlock> appHistList = new ArrayList<>();
+        ArrayList<Note_Appointment> appHistList = new ArrayList<>();
         collectionBookingReference
                 .whereEqualTo("doctor_documentID", myuserphone)
                 .orderBy("date", Query.Direction.ASCENDING)
@@ -132,8 +131,8 @@ public class Fragment_Doctor_History extends Fragment {
                                                     String temp_name1 = (String) documentSnapshot.get("FirstName");
                                                     String temp_name2 = (String) documentSnapshot.get("LastName");
                                                     String name_patient = temp_name1+ " " +temp_name2;
-                                                    appHistList.add(new AppointmentBlock(date + " " + time, documentID, name_patient, myuserphone));
-                                                    mAdapter = new AppointmentBlockAdapter(appHistList);
+                                                    appHistList.add(new Note_Appointment(date + " " + time, documentID, name_patient, myuserphone));
+                                                    mAdapter = new Adapter_Note_Appointment(appHistList);
                                                     mRecyclerView.setLayoutManager(mlayoutManager);
                                                     mRecyclerView.setAdapter(mAdapter);
                                                 }
