@@ -55,6 +55,7 @@ public class Adapter_Note_Appointment_Patient extends RecyclerView.Adapter<Adapt
 //                Toast.makeText(v.getContext(), current.getDocumentID(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(v.getContext(), Activity_Patient_ViewAppointment.class);
                 intent.putExtra("Appointment_Document_ID",current.getDocumentID());
+                intent.putExtra("Appointment_Date_Time",current.getAppointmentDateTime());
                 v.getContext().startActivity(intent);
             }
         });
