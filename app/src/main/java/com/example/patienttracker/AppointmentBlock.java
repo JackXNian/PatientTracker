@@ -27,6 +27,7 @@ public class AppointmentBlock {
         return Name;
     }
 
+
     public String getNumber() {
         return Number;
     }
