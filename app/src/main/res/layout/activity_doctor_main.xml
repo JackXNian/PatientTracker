@@ -16,7 +16,6 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-
         />
 
     <com.etebarian.meowbottomnavigation.MeowBottomNavigation
@@ -24,18 +23,17 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        app:mbn_circleColor="@color/pureWhite"
-        app:mbn_selectedIconColor="@color/greenDoctor"
-
-        app:mbn_countTextColor="@color/pureWhite"
-        app:mbn_countBackgroundColor="@color/greenDoctor2"
-
-        app:mbn_defaultIconColor="@color/pureWhite"
-        app:mbn_shadowColor="@color/greenDoctor"
-
         android:background="@color/greenDoctor2"
         app:mbn_backgroundBottomColor="@color/greenDoctor2"
-        />
+
+        app:mbn_circleColor="@color/pureWhite"
+        app:mbn_countBackgroundColor="@color/greenDoctor2"
+
+        app:mbn_countTextColor="@color/pureWhite"
+        app:mbn_defaultIconColor="@color/pureWhite"
+
+        app:mbn_selectedIconColor="@color/greenDoctor"
+        app:mbn_shadowColor="@color/greenDoctor" />
 
 
 </LinearLayout>

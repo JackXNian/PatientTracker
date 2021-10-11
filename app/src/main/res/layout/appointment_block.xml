@@ -31,7 +31,7 @@
             android:layout_below="@id/TV_AppDate"
             android:text="Doctor Name"
             android:textColor="@color/pureWhite"
-            android:textSize="22sp"></TextView>
+            android:textSize="22sp"/>
 
         <TextView
             android:id="@+id/TV_DoctorNumber"
@@ -40,9 +40,7 @@
             android:layout_below="@id/TV_DoctorName"
             android:text="Doctor Number"
             android:textSize="18sp"
-            android:textColor="@color/pureWhite"
-            >
-        </TextView>
+            android:textColor="@color/pureWhite"/>
 
         <Button
             android:layout_width="wrap_content"
