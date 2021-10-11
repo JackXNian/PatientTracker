@@ -16,23 +16,16 @@ public class AppointmentBlockAdapter extends RecyclerView.Adapter<AppointmentBlo
     private  ArrayList<AppointmentBlock> mAppList;
 
     public static class AppointmentViewHolder extends RecyclerView.ViewHolder{
-        public TextView tvAppDate;
-        public TextView tvDocName;
-        public TextView tvDocNum;
+        public TextView tv_Appointment_Date;
+        public TextView tv_Name;
+        public TextView tv_Number;
         public Button btn_view;
         public AppointmentViewHolder(@NonNull View itemView) {
             super(itemView);
-                tvAppDate = itemView.findViewById(R.id.TV_C_Appointment_AppDate);
-                tvDocName = itemView.findViewById(R.id.TV_C_Appointment_Name);
-                tvDocNum = itemView.findViewById(R.id.TV_C_Appointment_Number);
+                tv_Appointment_Date = itemView.findViewById(R.id.TV_C_Appointment_AppDate);
+                tv_Name = itemView.findViewById(R.id.TV_C_Appointment_Name);
+                tv_Number = itemView.findViewById(R.id.TV_C_Appointment_Number);
                 btn_view = itemView.findViewById(R.id.B_C_Appointment_View);
-
-                btn_view.setOnClickListener(new View.OnClickListener() {
-                    @Override
-                    public void onClick(View v) {
-                        Toast.makeText(v.getContext(), "Hello Java point",Toast.LENGTH_SHORT).show();
-                    }
-                });
         }
     }
 
@@ -51,10 +44,19 @@ public class AppointmentBlockAdapter extends RecyclerView.Adapter<AppointmentBlo
     @Override
     public void onBindViewHolder(@NonNull AppointmentViewHolder holder, int position) {
         AppointmentBlock current = mAppList.get(position);
-        holder.tvAppDate.setText(current.getAppointmentDate());
-        holder.tvDocName.setText(current.getDoctorName());
-        holder.tvDocNum.setText(current.getDoctorNum());
+        holder.tv_Appointment_Date.setText(current.getAppointmentDate());
+        holder.tv_Name.setText(current.getName());
+        holder.tv_Number.setText(current.getNumber());
 
+        holder.btn_view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(v.getContext(),
+                        current.getNumber() + "  " + current.getAppointmentDate(),
+                        Toast.LENGTH_SHORT).show();
+
+            }
+        });
     }
 
     @Override

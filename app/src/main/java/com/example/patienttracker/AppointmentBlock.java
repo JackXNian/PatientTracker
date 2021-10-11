@@ -2,28 +2,28 @@ package com.example.patienttracker;
 
 public class AppointmentBlock {
     private String AppointmentDate;
-    private String DoctorName;
-    private String DoctorNum;
+    private String Name;
+    private String Number;
 
     public AppointmentBlock(){
         //empty needed for FireStore
     }
 
-    public AppointmentBlock(String AppDate, String DocName, String DocNum){
-        AppointmentDate = AppDate;
-        DoctorName = DocName;
-        DoctorNum = DocNum;
+    public AppointmentBlock(String appointmentDate, String name, String number){
+        AppointmentDate = appointmentDate;
+        Name = name;
+        Number = number;
     }
 
     public String getAppointmentDate() {
         return AppointmentDate;
     }
 
-    public String getDoctorName() {
-        return DoctorName;
+    public String getName() {
+        return Name;
     }
 
-    public String getDoctorNum() {
-        return DoctorNum;
+    public String getNumber() {
+        return Number;
     }
 }
