@@ -58,7 +58,7 @@ Activity_Doctor extends AppCompatActivity {
         //send data to Each fragment
         fragment_doctor_home = Fragment_Doctor_Home.newInstance(
                 userFName,userLName,userPhone,userEmail,userFields,userQualifications,userYears);
-//        fragment_doctor_search = Fragment_Doctor_Search.newInstance();
+        fragment_doctor_appointments = fragment_doctor_appointments.newInstance(userPhone);
         fragment_doctor_availability = Fragment_Doctor_Availability.newInstance(userPhone);
 
         fragment_doctor_history = Fragment_Doctor_History.newInstance(userPhone);
@@ -85,8 +85,7 @@ Activity_Doctor extends AppCompatActivity {
                         break;
                     case 2://When id is 2 Doctor Search Page
 //                        loadFragment(fragment_doctor_search);
-                        fragment = new Fragment_Doctor_Appointments();
-                        loadFragment(fragment);
+                        loadFragment(fragment_doctor_appointments);
                         break;
                     case 3://When id is 3 Doctor Availability
                         loadFragment(fragment_doctor_availability);

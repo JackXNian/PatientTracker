@@ -57,7 +57,7 @@ public class Activity_Patient_Booking_Select_Time extends AppCompatActivity {
     private static final String TAG = "Activity Patient Booking Select";
 
     //variables
-    private String doctor_document_id,doctor_document_email,patient_document_id, patient_document_email;
+    private String doctor_document_id,doctor_document_email,doctor_document_name,patient_document_id, patient_document_email,patient_document_firstName,patient_document_lastName;
     private Note_Doctor doctor_information;
     public String selectedDate,selectedDayOfWeek;
     private final long dateToday = new Date().getTime();
@@ -117,9 +117,11 @@ public class Activity_Patient_Booking_Select_Time extends AppCompatActivity {
         Intent intent = getIntent();
         patient_document_id = intent.getStringExtra(Fragment_Patient_Home.phoneKey);
         patient_document_email = intent.getStringExtra(Fragment_Patient_Home.emailKey);
+        patient_document_firstName = intent.getStringExtra(Fragment_Patient_Home.firstNameKey);
+        patient_document_lastName = intent.getStringExtra(Fragment_Patient_Home.lastNameKey);
         doctor_document_id = intent.getStringExtra(Activity_Patient_Booking_Select_Doctor.doctorInformationKey);
         doctor_document_email = intent.getStringExtra(Activity_Patient_Booking_Select_Doctor.doctorEmailKey);
-
+        doctor_document_name = intent.getStringExtra(Activity_Patient_Booking_Select_Doctor.doctorNameKey);
         //set widgets view
         calendarView = findViewById(R.id.CV_A_PatientBookingSelect_Calender);
         calendarView.setMinDate((dateToday));//set CalendarView MinDate to "today"
@@ -662,7 +664,7 @@ public class Activity_Patient_Booking_Select_Time extends AppCompatActivity {
         protected Void doInBackground(Void... voids) {
                     final String Username = "notdiscoveryemails@gmail.com";
                     final String Password = "SDgroup12";
-                    String MessagetoSend = "Booking confirmed for "+selectedDate;
+                    String MessagetoSend = "Booking confirmed for "+selectedDate +"\n" +"Doctor name: "+doctor_document_name+"\n"+"Patient name: "+patient_document_firstName+" "+patient_document_lastName;
                     Properties props = new Properties();
                     props.put("mail.smtp.auth","true");
                     props.put("mail.smtp.starttls.enable","true");

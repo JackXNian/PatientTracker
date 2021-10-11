@@ -52,7 +52,7 @@ public class Activity_Patient extends AppCompatActivity {
         //send data to Each fragment
         fragment_patient_home = Fragment_Patient_Home.newInstance(
                 userFName,userLName,userPhone,userEmail);
-//        fragment_patient_lookup = Fragment_Patient_Lookup.newInstance();
+        fragment_patient_lookup = Fragment_Patient_Lookup.newInstance(userPhone);
         fragment_patient_history = Fragment_Patient_History.newInstance(userPhone);
 
         //Assign variable
@@ -79,8 +79,8 @@ public class Activity_Patient extends AppCompatActivity {
                         break;
                     case 2://When id is 2 Patient lookup
 //                        loadFragment(fragment_patient_lookup);
-                        fragment = new Fragment_Patient_Lookup();
-                        loadFragment(fragment);
+                        loadFragment(fragment_patient_lookup);
+
                         break;
                     case 3://When id is 3 Patient History
                        loadFragment(fragment_patient_history);

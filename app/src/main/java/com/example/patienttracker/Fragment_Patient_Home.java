@@ -142,6 +142,8 @@ public class Fragment_Patient_Home extends Fragment {
                 Intent intent = new Intent(getActivity(), Activity_Patient_Booking_Select_Doctor.class);
                 intent.putExtra(phoneKey, patient_phone);
                 intent.putExtra(emailKey, patient_email);
+                intent.putExtra(firstNameKey,patient_first_name);
+                intent.putExtra(lastNameKey,patient_last_name);
                 startActivity(intent);
             }
         });
