@@ -12,6 +12,7 @@ import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -62,6 +63,8 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
         et_prescription = findViewById(R.id.ET_A_Appointment_Prescription);
 
         btn_confirm     = findViewById(R.id.B_A_Appointment_Confirm);
+
+        Toast.makeText(getApplicationContext(),documentID_Booking,Toast.LENGTH_SHORT).show();
 
         getAppointmentDetails();
     }
