@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Xin/StudioProjects/PatientTracker/app/src/main/res/drawable/custom_underline_background_white.xml" value="0.33063063063063064" />
         <entry key="..\:/Users/Xin/StudioProjects/PatientTracker/app/src/main/res/layout/activity_doctor_login.xml" value="0.31666666666666665" />
         <entry key="..\:/Users/Xin/StudioProjects/PatientTracker/app/src/main/res/layout/activity_doctor_main.xml" value="0.1" />
         <entry key="..\:/Users/Xin/StudioProjects/PatientTracker/app/src/main/res/layout/activity_doctor_register.xml" value="0.31666666666666665" />
@@ -10,6 +11,7 @@
         <entry key="..\:/Users/Xin/StudioProjects/PatientTracker/app/src/main/res/layout/activity_main.xml" value="0.31666666666666665" />
         <entry key="..\:/Users/Xin/StudioProjects/PatientTracker/app/src/main/res/layout/activity_patient_main.xml" value="0.1" />
         <entry key="..\:/Users/Xin/StudioProjects/PatientTracker/app/src/main/res/layout/appointment_block.xml" value="0.31666666666666665" />
+        <entry key="..\:/Users/Xin/StudioProjects/PatientTracker/app/src/main/res/layout/recyclerview_doctor_card.xml" value="0.31666666666666665" />
         <entry key="..\:/Users/Xin/StudioProjects/PatientTracker/app/src/main/res/layout/recyclerview_doctor_info.xml" value="0.31666666666666665" />
         <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable-v24/custom_button1.xml" value="0.33513513513513515" />
         <entry key="..\:/Users/jackx/AndroidStudioProjects/PatientTracker/app/src/main/res/drawable-v24/custom_button2.xml" value="0.33513513513513515" />

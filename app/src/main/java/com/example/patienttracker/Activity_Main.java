@@ -8,16 +8,14 @@ import android.view.View;
 import android.widget.Button;
 
 public class Activity_Main extends AppCompatActivity {
-    private Button btn_Doctor;
-    private Button btn_Patient;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        btn_Doctor = (Button) findViewById(R.id.B_A_Main_Doctor);
-        btn_Patient = (Button) findViewById(R.id.B_A_Main_Patient);
+        Button btn_Doctor = (Button) findViewById(R.id.B_A_Main_Doctor);
+        Button btn_Patient = (Button) findViewById(R.id.B_A_Main_Patient);
 
         btn_Doctor.setOnClickListener(new View.OnClickListener() {
             @Override
