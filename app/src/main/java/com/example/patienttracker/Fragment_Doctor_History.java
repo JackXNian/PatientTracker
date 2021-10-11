@@ -131,9 +131,9 @@ public class Fragment_Doctor_History extends Fragment {
                                                 public void onSuccess(DocumentSnapshot documentSnapshot) {
                                                     String temp_name1 = (String) documentSnapshot.get("FirstName");
                                                     String temp_name2 = (String) documentSnapshot.get("LastName");
-                                                    String DocName = temp_name1+ " " +temp_name2;
+                                                    String name_patient = temp_name1+ " " +temp_name2;
                                                     date[0] = date[0] +" "+time;
-                                                    appHistList.add(new AppointmentBlock(date[0], DocName, myuserphone));
+                                                    appHistList.add(new AppointmentBlock(date[0], name_patient, myuserphone));
                                                     mAdapter = new AppointmentBlockAdapter(appHistList);
                                                     mRecyclerView.setLayoutManager(mlayoutManager);
                                                     mRecyclerView.setAdapter(mAdapter);

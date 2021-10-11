@@ -23,8 +23,8 @@ public class AppointmentBlockAdapter extends RecyclerView.Adapter<AppointmentBlo
         public AppointmentViewHolder(@NonNull View itemView) {
             super(itemView);
                 tvAppDate = itemView.findViewById(R.id.TV_C_Appointment_AppDate);
-                tvDocName = itemView.findViewById(R.id.TV_C_Appointment_DoctorName);
-                tvDocNum = itemView.findViewById(R.id.TV_C_Appointment_DoctorNumber);
+                tvDocName = itemView.findViewById(R.id.TV_C_Appointment_Name);
+                tvDocNum = itemView.findViewById(R.id.TV_C_Appointment_Number);
                 btn_view = itemView.findViewById(R.id.B_C_Appointment_View);
 
                 btn_view.setOnClickListener(new View.OnClickListener() {
