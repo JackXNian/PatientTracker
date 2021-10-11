@@ -62,7 +62,6 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
         final Intent intent = getIntent();
         documentID_Booking = intent.getStringExtra(documentKey);
         datetime    = intent.getStringExtra(datetimeKey);
-//        Log.d(TAG,documentID +" -- "+datetime);
 
         tv_name_doctor  = findViewById(R.id.TV_A_Appointment_Doctor);
         tv_name_patient = findViewById(R.id.TV_A_Appointment_Patient);
