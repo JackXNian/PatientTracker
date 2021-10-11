@@ -1,33 +1,33 @@
 package com.example.patienttracker;
 
 public class Note_Appointment {
-    private String AppointmentDateTime;
-    private String DocumentID;
-    private String Name;
-    private String Number;
+    private String appointmentDateTime;
+    private String documentID;
+    private String name;
+    private String number;
 
     public Note_Appointment(){
         //empty constructor
     }
 
     public Note_Appointment(String appointmentDate, String documentID, String name, String number){
-        AppointmentDateTime = appointmentDate;
-        DocumentID = documentID;
-        Name = name;
-        Number = number;
+        this.appointmentDateTime = appointmentDate;
+        this.documentID = documentID;
+        this.name = name;
+        this.number = number;
     }
 
     public String getAppointmentDateTime() {
-        return AppointmentDateTime;
+        return appointmentDateTime;
     }
 
-    public String getDocumentID() { return DocumentID; }
+    public String getDocumentID() { return documentID; }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public String getNumber() {
-        return Number;
+        return number;
     }
 }

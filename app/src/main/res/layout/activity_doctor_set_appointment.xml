@@ -27,22 +27,32 @@
         android:textColor="@color/pureWhite"
         android:textSize="30sp"/>
 
-    <TextView
-        android:id="@+id/TV_A_Appointment_Doctor"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/TV_A_Appointment_Title"
-        android:layout_marginStart="20dp"
+        <TextView
+            android:id="@+id/TV_A_Appointment_Doctor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_A_Appointment_Title"
+            android:layout_marginStart="20dp"
 
-        android:text="Doctor : "
-        android:textColor="@color/pureWhite"
-        android:textSize="20sp"/>
+            android:text="Doctor : "
+            android:textColor="@color/pureWhite"
+            android:textSize="20sp" />
+        <TextView
+            android:id="@+id/TV_A_Appointment_Doctor_Field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/TV_A_Appointment_Doctor"
+            android:layout_marginStart="20dp"
 
-    <TextView
+            android:text="Doctor Field : "
+            android:textColor="@color/pureWhite"
+            android:textSize="20sp" />
+
+        <TextView
         android:id="@+id/TV_A_Appointment_Patient"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/TV_A_Appointment_Doctor"
+        android:layout_below="@+id/TV_A_Appointment_Doctor_Field"
         android:layout_marginStart="20dp"
 
         android:text="Patient : "

@@ -11,6 +11,7 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -33,13 +34,13 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
     private static final String datetimeKey = "Appointment_Date_Time";
 
     private String
-            documentID_Booking,documentID_Doctor,documentID_Patient,
-            name_doctor,name_patient,datetime,description,prescription;
+            documentID_Booking, documentID_Doctor, documentID_Patient,
+            datetime, description, prescription;
 
     private Map<String, Object> doctorData ;
 
     //widgets
-    private TextView tv_name_doctor,tv_name_patient,tv_datetime;
+    private TextView tv_name_doctor,tv_name_patient,tv_datetime,tv_doctor_field;
     private EditText et_description,et_prescription;
     private Button btn_confirm;
 
@@ -66,6 +67,7 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
         tv_name_doctor  = findViewById(R.id.TV_A_Appointment_Doctor);
         tv_name_patient = findViewById(R.id.TV_A_Appointment_Patient);
         tv_datetime     = findViewById(R.id.TV_A_Appointment_DateTime);
+        tv_doctor_field = findViewById(R.id.TV_A_Appointment_Doctor_Field);
 
         et_description  = findViewById(R.id.ET_A_Appointment_Description);
         et_prescription = findViewById(R.id.ET_A_Appointment_Prescription);
@@ -80,6 +82,7 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
         btn_continue = dialog_successful.findViewById(R.id.B_D_Success_Continue);
 
         getAppointmentDetails();
+        getAppointmentForm();
     }
 
     @SuppressLint("SetTextI18n")
@@ -88,9 +91,6 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
         super.onStart();
 
         tv_datetime     .setText("Date & Time : " + datetime);
-
-        et_description  .setText(description);
-        et_prescription .setText(prescription);
 
         et_description  .addTextChangedListener(descriptionTextWatcher);
         et_prescription .addTextChangedListener(prescriptionTextWatcher);
@@ -108,7 +108,7 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            description = et_description.getText().toString().trim();
+            description = et_description.getText().toString();
         }
 
         @Override
@@ -120,7 +120,7 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
 
         @Override
         public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-            prescription = et_prescription.getText().toString().trim();
+            prescription = et_prescription.getText().toString();
         }
 
         @Override
@@ -154,15 +154,15 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
                         doctorData = documentSnapshot.getData();
                         Note_Doctor note = documentSnapshot.toObject(Note_Doctor.class);
                         assert note != null;
-                        name_doctor = note.getFirstName() + " " + note.getLastName();
-                        tv_name_doctor  .setText("Doctor : " + name_doctor);
+                        tv_name_doctor.setText("Doctor : " + note.getFirstName() + " " + note.getLastName());
+                        tv_doctor_field.setText("Doctor Field : " + note.getFields());
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
                     @SuppressLint("SetTextI18n")
                     @Override
                     public void onFailure(@NonNull Exception e) {
-                        tv_name_doctor  .setText("ERROR GETTING DOCTOR NAME");
+                        tv_name_doctor.setText("ERROR GETTING DOCTOR NAME");
                     }
                 });
 
@@ -175,8 +175,8 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
                         Note_Patient note = documentSnapshot.toObject(Note_Patient.class);
                         assert note != null;
-                        name_patient = note.getFirstName() + " " + note.getLastName();
-                        tv_name_patient .setText("Patient : " + name_patient);
+                        tv_name_patient .setText("Patient : " + note.getFirstName() + " " + note.getLastName());
+
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -189,10 +189,10 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
     }
 
     private void setAppointmentFrom(){
-        Note_Appointment_Detail note = new Note_Appointment_Detail(description,prescription);
+        Note_Appointment_Form note = new Note_Appointment_Form(description, prescription);
 
         collectionBookingReference.document(documentID_Booking)
-                .collection("SubCollection").document("Details")
+                .collection("SubCollection").document("Form")
                 .set(note)
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
@@ -204,6 +204,29 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
                     @Override
                     public void onFailure(@NonNull Exception e) {
                         openFailDialog();
+                    }
+                });
+    }
+    private void getAppointmentForm(){
+        collectionBookingReference.document(documentID_Booking)
+                .collection("SubCollection").document("Form")
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        Note_Appointment_Form note = documentSnapshot.toObject(Note_Appointment_Form.class);
+                        if (note != null){
+                            et_description.setText(note.getDescription());
+                            et_prescription.setText(note.getPrescription());
+                        }else{
+                            Log.d(TAG, "onSuccess: note = null");
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e(TAG, "onFailure: failed getting appointment form");
                     }
                 });
     }
