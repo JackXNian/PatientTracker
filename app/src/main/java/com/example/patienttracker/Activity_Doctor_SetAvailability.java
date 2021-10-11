@@ -99,7 +99,7 @@ public class Activity_Doctor_SetAvailability extends AppCompatActivity {
         btn_confirm = findViewById(R.id.B_A_DoctorSetA_Confirm);
 
         dialog_successful = new Dialog(this);
-        dialog_successful.setContentView(R.layout.dialog_update_successful);
+        dialog_successful.setContentView(R.layout.dialog_successful_update);
         dialog_successful.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         btn_continue = dialog_successful.findViewById(R.id.B_D_Success_Continue);
 

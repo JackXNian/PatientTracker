@@ -52,10 +52,10 @@ public class Adapter_Note_Appointment_Patient extends RecyclerView.Adapter<Adapt
         holder.btn_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), current.getDocumentID(), Toast.LENGTH_SHORT).show();
-//                Intent intent = new Intent(v.getContext(), Activity_Patient_ViewAppointment.class);
-//                intent.putExtra("Appointment_Document_ID",current.getDocumentID());
-//                v.getContext().startActivity(intent);
+//                Toast.makeText(v.getContext(), current.getDocumentID(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), Activity_Patient_ViewAppointment.class);
+                intent.putExtra("Appointment_Document_ID",current.getDocumentID());
+                v.getContext().startActivity(intent);
             }
         });
     }

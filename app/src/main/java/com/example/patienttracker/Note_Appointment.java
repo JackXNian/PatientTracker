@@ -7,7 +7,7 @@ public class Note_Appointment {
     private String Number;
 
     public Note_Appointment(){
-        //empty needed for FireStore
+        //empty constructor
     }
 
     public Note_Appointment(String appointmentDate, String documentID, String name, String number){

@@ -94,7 +94,7 @@ public class Activity_Patient_Register extends AppCompatActivity {
         et_id               .addTextChangedListener(idTextWatcher);
 
         dialog_successful = new Dialog(this);
-        dialog_successful.setContentView(R.layout.dialog_register_successful);
+        dialog_successful.setContentView(R.layout.dialog_successful_register);
         dialog_successful.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
         btnLogin = dialog_successful.findViewById(R.id.B_D_Success_Continue);
     }//end of onCreate
