@@ -33,7 +33,7 @@ public class Adapter_Note_Doctor extends FirestoreRecyclerAdapter<Note_Doctor, A
     @Override
     public Holder_Note_Doctor_Info onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
-                .inflate(R.layout.recyclerview_doctor_info,parent,false);
+                .inflate(R.layout.recyclerview_doctor_card,parent,false);
         return new Holder_Note_Doctor_Info(view);
     }
 
