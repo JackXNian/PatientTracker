@@ -1,5 +1,8 @@
 package com.example.patienttracker;
 
+import static androidx.core.content.ContextCompat.startActivity;
+
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,7 +54,10 @@ public class Adapter_Note_Appointment extends RecyclerView.Adapter<Adapter_Note_
         holder.btn_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(), current.getDocumentID(), Toast.LENGTH_SHORT).show();
+//                Toast.makeText(v.getContext(), current.getDocumentID(), Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(v.getContext(), Activity_Doctor_SetAppointment.class);
+                intent.putExtra("Appointment_Document_ID",current.getDocumentID());
+                v.getContext().startActivity(intent);
             }
         });
     }
