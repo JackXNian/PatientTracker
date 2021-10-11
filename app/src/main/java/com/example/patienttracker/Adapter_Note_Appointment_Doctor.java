@@ -1,21 +1,18 @@
 package com.example.patienttracker;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
 import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class Adapter_Note_Appointment extends RecyclerView.Adapter<Adapter_Note_Appointment.AppointmentViewHolder> {
+public class Adapter_Note_Appointment_Doctor extends RecyclerView.Adapter<Adapter_Note_Appointment_Doctor.AppointmentViewHolder> {
     private  ArrayList<Note_Appointment> mAppList;
 
     public static class AppointmentViewHolder extends RecyclerView.ViewHolder{
@@ -32,7 +29,7 @@ public class Adapter_Note_Appointment extends RecyclerView.Adapter<Adapter_Note_
         }
     }
 
-    public Adapter_Note_Appointment(ArrayList<Note_Appointment> AppHistList){
+    public Adapter_Note_Appointment_Doctor(ArrayList<Note_Appointment> AppHistList){
         mAppList = AppHistList;
     }
 
