@@ -5,19 +5,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.textfield.TextInputLayout;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
@@ -256,7 +252,7 @@ public class Activity_Doctor_Login extends AppCompatActivity {
 //        }else {
 //            super.onBackPressed();
 //        }
-        Intent intent = new Intent(this, ActivityMain.class);
+        Intent intent = new Intent(this, Activity_Main.class);
         startActivity(intent);
     }//end of onBackPressed
 

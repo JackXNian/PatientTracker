@@ -15,7 +15,7 @@
             android:name=".Activity_Doctor_SetAppointment"
             android:exported="true" />
         <activity
-            android:name=".ActivityMain"
+            android:name=".Activity_Main"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -253,7 +252,7 @@ public class Activity_Patient_Login extends AppCompatActivity {
 //        }else {
 //            super.onBackPressed();
 //        }
-        Intent intent = new Intent(this, ActivityMain.class);
+        Intent intent = new Intent(this, Activity_Main.class);
         startActivity(intent);
     }//end of onBackPressed
 

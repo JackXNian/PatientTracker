@@ -7,7 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ActivityMain extends AppCompatActivity {
+public class Activity_Main extends AppCompatActivity {
     private Button btn_Doctor;
     private Button btn_Patient;
 

@@ -9,7 +9,7 @@
     android:id="@+id/LO_A_Main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ActivityMain"
+    tools:context=".Activity_Main"
 
     android:background="@drawable/custom_trans"
     tools:ignore="HardcodedText"
