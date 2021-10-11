@@ -16,7 +16,7 @@
         android:layout_margin="10dp">
 
         <TextView
-            android:id="@+id/TV_AppDate"
+            android:id="@+id/TV_C_Appointment_AppDate"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="appointment date/time"
@@ -25,30 +25,31 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/TV_DoctorName"
+            android:id="@+id/TV_C_Appointment_DoctorName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/TV_AppDate"
+            android:layout_below="@id/TV_C_Appointment_AppDate"
             android:text="Doctor Name"
             android:textColor="@color/pureWhite"
             android:textSize="22sp"/>
 
         <TextView
-            android:id="@+id/TV_DoctorNumber"
+            android:id="@+id/TV_C_Appointment_DoctorNumber"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/TV_DoctorName"
+            android:layout_below="@id/TV_C_Appointment_DoctorName"
             android:text="Doctor Number"
             android:textSize="18sp"
             android:textColor="@color/pureWhite"/>
 
         <Button
+            android:id="@+id/B_C_Appointment_View"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/TV_DoctorNumber"
+            android:layout_below="@id/TV_C_Appointment_DoctorNumber"
             android:text="View Appointment Form"
+            android:layout_centerHorizontal="true"
             >
-
         </Button>
 
     </RelativeLayout>
