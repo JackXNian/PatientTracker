@@ -1,5 +1,6 @@
 package com.example.patienttracker;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
@@ -7,12 +8,18 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.firestore.CollectionReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 
 public class Activity_Doctor_SetAppointment extends AppCompatActivity {
 
@@ -46,7 +53,6 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
         documentID_Booking = intent.getStringExtra(documentKey);
         datetime    = intent.getStringExtra(datetimeKey);
 //        Log.d(TAG,documentID +" -- "+datetime);
-        getAppointmentDetails();
 
         tv_name_doctor  = findViewById(R.id.TV_A_Appointment_Doctor);
         tv_name_patient = findViewById(R.id.TV_A_Appointment_Patient);
@@ -56,6 +62,8 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
         et_prescription = findViewById(R.id.ET_A_Appointment_Prescription);
 
         btn_confirm     = findViewById(R.id.B_A_Appointment_Confirm);
+
+        getAppointmentDetails();
     }
 
     @SuppressLint("SetTextI18n")
@@ -102,6 +110,18 @@ public class Activity_Doctor_SetAppointment extends AppCompatActivity {
     };
 
     void getAppointmentDetails(){
+        collectionBookingReference
+                .document(documentID_Booking)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+                    @Override
+                    public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        Note_Booking note = documentSnapshot.toObject(Note_Booking.class);
+                        documentID_Doctor = note.getDoctor_documentID();
+                        documentID_Patient = note.getPatient_documentID();
 
+                        Log.d(TAG, documentID_Doctor + " : " + documentID_Patient);
+                    }
+                });
     }
 }
