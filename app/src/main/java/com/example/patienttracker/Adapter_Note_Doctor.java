@@ -13,10 +13,10 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.firebase.firestore.DocumentSnapshot;
 
-public class Adapter_Note_Doctor_Info extends FirestoreRecyclerAdapter<Note_Doctor,Adapter_Note_Doctor_Info.Holder_Note_Doctor_Info> {
+public class Adapter_Note_Doctor extends FirestoreRecyclerAdapter<Note_Doctor, Adapter_Note_Doctor.Holder_Note_Doctor_Info> {
     private OnItemClickListener onItemClickListener;
 
-    public Adapter_Note_Doctor_Info(@NonNull FirestoreRecyclerOptions<Note_Doctor> options) {
+    public Adapter_Note_Doctor(@NonNull FirestoreRecyclerOptions<Note_Doctor> options) {
         super(options);
     }
 
