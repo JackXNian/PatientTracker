@@ -13,7 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.ArrayList;
 
 public class Adapter_Note_Appointment_Doctor extends RecyclerView.Adapter<Adapter_Note_Appointment_Doctor.AppointmentViewHolder> {
-    private  ArrayList<Note_Appointment> mAppList;
+    private ArrayList<Note_Appointment> mAppList;
+    private String documentID,name,datetime,number;
 
     public static class AppointmentViewHolder extends RecyclerView.ViewHolder{
         public TextView tv_Appointment_Date;
@@ -44,16 +45,21 @@ public class Adapter_Note_Appointment_Doctor extends RecyclerView.Adapter<Adapte
     @Override
     public void onBindViewHolder(@NonNull AppointmentViewHolder holder, int position) {
         Note_Appointment current = mAppList.get(position);
-        holder.tv_Appointment_Date.setText(current.getAppointmentDateTime());
-        holder.tv_Name.setText(current.getName());
-        holder.tv_Number.setText(current.getNumber());
+        documentID = current.getDocumentID();
+        datetime = current.getAppointmentDateTime();
+        name = current.getName();
+        number = current.getNumber();
 
+        holder.tv_Appointment_Date.setText(datetime);
+        holder.tv_Name.setText(name);
+        holder.tv_Number.setText(number);
         holder.btn_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 //                Toast.makeText(v.getContext(), current.getDocumentID(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(v.getContext(), Activity_Doctor_SetAppointment.class);
-                intent.putExtra("Appointment_Document_ID",current.getDocumentID());
+                intent.putExtra("Appointment_Document_ID",documentID);
+                intent.putExtra("Appointment_Date_Time",datetime);
                 v.getContext().startActivity(intent);
             }
         });

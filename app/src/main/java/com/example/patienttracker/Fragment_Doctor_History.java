@@ -34,25 +34,20 @@ import java.util.Date;
 public class Fragment_Doctor_History extends Fragment {
 
     //variables
-
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mlayoutManager;
+
     private static final String TAG                 = "FragmentDoctorHome";
-
-
     private static final String phoneKey            = "phonenumber";
 
-
     public static final String dateFormatPatten = "yyyy-MM-dd";
-
 
     private String myuserphone ;
     private String date_today;
     private final Date dateToday = new Date();
 
-    //widgets
-
+    //database
     private FirebaseFirestore db = FirebaseFirestore.getInstance();
     private CollectionReference collectionDoctorReference = db.collection("Doctor");
     private CollectionReference collectionBookingReference = db.collection("Booking");
