@@ -44,17 +44,14 @@ public class AppointmentBlockAdapter extends RecyclerView.Adapter<AppointmentBlo
     @Override
     public void onBindViewHolder(@NonNull AppointmentViewHolder holder, int position) {
         AppointmentBlock current = mAppList.get(position);
-        holder.tv_Appointment_Date.setText(current.getAppointmentDate());
+        holder.tv_Appointment_Date.setText(current.getAppointmentDateTime());
         holder.tv_Name.setText(current.getName());
         holder.tv_Number.setText(current.getNumber());
 
         holder.btn_view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(v.getContext(),
-                        current.getNumber() + "  " + current.getAppointmentDate(),
-                        Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(v.getContext(), current.getDocumentID(), Toast.LENGTH_SHORT).show();
             }
         });
     }

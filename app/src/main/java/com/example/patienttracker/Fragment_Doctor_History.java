@@ -111,15 +111,15 @@ public class Fragment_Doctor_History extends Fragment {
                             for(QueryDocumentSnapshot document : task.getResult()){
                                 Log.d(TAG, "debug adapter" + document.getId() + " => " + document.getData());
                                 Note_Booking note = document.toObject(Note_Booking.class);
-                                final String[] date = {note.getDate()};
+                                String date = note.getDate();
                                 String timeSlot = note.getTimeSlot();
                                 String PatientID = note.getPatient_documentID();
                                 Boolean isHalfHour = note.getDoctor_isHalfHourSlot();
                                 String time = getTime(timeSlot,isHalfHour);
-                                String DoctorName = " ";
+                                String documentID = document.getId();
                                 Boolean isBefore = false;
                                 try {
-                                    isBefore = checkDate(date[0]);
+                                    isBefore = checkDate(date);
                                 } catch (ParseException e) {
                                     e.printStackTrace();
                                 }
@@ -132,8 +132,7 @@ public class Fragment_Doctor_History extends Fragment {
                                                     String temp_name1 = (String) documentSnapshot.get("FirstName");
                                                     String temp_name2 = (String) documentSnapshot.get("LastName");
                                                     String name_patient = temp_name1+ " " +temp_name2;
-                                                    date[0] = date[0] +" "+time;
-                                                    appHistList.add(new AppointmentBlock(date[0], name_patient, myuserphone));
+                                                    appHistList.add(new AppointmentBlock(date + " " + time, documentID, name_patient, myuserphone));
                                                     mAdapter = new AppointmentBlockAdapter(appHistList);
                                                     mRecyclerView.setLayoutManager(mlayoutManager);
                                                     mRecyclerView.setAdapter(mAdapter);
